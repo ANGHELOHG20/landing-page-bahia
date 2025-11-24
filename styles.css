@@ -22,19 +22,26 @@ font-family: "Bebas Neue", sans-serif;
   }
 */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
 }
-  
+
 
 body {
     font-family: "Poppins", sans-serif;
     background-color: #1F1F1F;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 
 .container {
     max-width: 1200px;
@@ -85,7 +92,7 @@ body {
 .menu .navbar ul li a:hover {
     color: hwb(230 32% 5%);
     text-transform: uppercase;
-    
+
 }
 
 #menu {
@@ -106,20 +113,22 @@ body {
     margin-bottom: 45px;
 }
 
-.header-txt h1, span, h3 {
+.header-txt h2,
+.header-txt span,
+.header-txt h3 {
     font-size: 110px;
     letter-spacing: 5px;
     text-transform: uppercase;
     font-family: "Bebas Neue", cursive;
-    color: hwb(230 32% 5%);;
-    margin-bottom: 15px;    
+    color: hwb(230 32% 5%);
+    margin-bottom: 15px;
 }
 
 .header-txt span {
     font-size: 25px;
 }
 
-.header-txt p{
+.header-txt p {
     color: white;
     padding: 0 250px;
     margin: 25px 0;
@@ -128,12 +137,12 @@ body {
 .btn-1 {
     display: inline-block;
     padding: 11px 25px;
-    background-color:hwb(230 12% 15%);
+    background-color: hwb(230 12% 15%);
     color: #FFFF;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 20px;
-    font-family: "Bebas Neue", sans-serif; 
+    font-family: "Bebas Neue", sans-serif;
     margin: 25px 0;
     border: 0;
     align-content: center;
@@ -182,7 +191,7 @@ body {
     width: 50%;
     padding: clamp(50px, 10vw, 150px) clamp(20px, 15vw, 100px);
     background-color: #191919;
-}   
+}
 
 h2 {
     font-size: 80px;
@@ -190,7 +199,7 @@ h2 {
     text-align: center;
     color: #FFFF;
     text-transform: uppercase;
-    font-family: "Bebas Neue", cursive; 
+    font-family: "Bebas Neue", cursive;
     margin-bottom: 20px;
 }
 
@@ -203,7 +212,8 @@ p {
 
 .b1 {
     /* Reemplazo más seguro */
-color: #1a1aff; /* o similar */
+    color: #1a1aff;
+    /* o similar */
 
 }
 
@@ -265,7 +275,7 @@ hr {
 }
 
 .services-1 p {
-    flex-grow: 1; 
+    flex-grow: 1;
     margin-bottom: 15px;
 }
 
@@ -305,7 +315,7 @@ tr {
 th {
     color: #FFFFFF;
     padding-bottom: 15px;
-    
+
 }
 
 td {
@@ -340,9 +350,9 @@ td {
     grid-template-rows: auto;
     gap: 20px;
     padding: 20px;
-  }
-  
-  .personal-1 {
+}
+
+.personal-1 {
     background-color: white;
     border-radius: 12px;
     padding: 10px;
@@ -350,15 +360,15 @@ td {
     align-items: center;
     justify-content: center;
     height: 120px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  .personal-1 img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.personal-1 img {
     max-width: 100%;
     max-height: 80px;
     object-fit: contain;
-  }
-  
+}
+
 .personal-1 a {
     color: #0606b8;
 }
@@ -385,12 +395,13 @@ form {
 .campo {
     margin: 5px;
     padding: 20px 15px;
-    width: 250px;background-color: #0e0e0e;
+    width: 250px;
+    background-color: #0e0e0e;
     border: 1px solid #0606b8;
     outline: none;
     border-radius: 10px;
     color: #FFFFFF;
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 
@@ -400,17 +411,20 @@ textarea {
 
 }
 
-.footer-txt  {
+.footer-txt {
     text-align: center;
 }
 
-@media(max-width: 991px){
+@media (max-width: 991px) {
+
     .menu {
         padding: 20px;
     }
+
     .menu label {
         display: initial;
     }
+
     .menu .navbar {
         position: absolute;
         top: 100%;
@@ -424,24 +438,30 @@ textarea {
         width: 100%;
     }
 
-    #menu:checked ~ .navbar{
+    #menu:checked~.navbar {
         display: initial;
     }
 
     .header {
-        min-height: 0vh;
+        min-height: auto;
     }
 
     .header-content {
-        padding: 80px 30px 50px 30px;
+        padding: 100px 1.5rem 50px 1.5rem;
     }
 
     .header-txt {
         margin-bottom: 15px;
+        text-align: center;
     }
 
-    .header-txt h1 {
-        font-size: 90px;
+    .header-txt h2 {
+        font-size: 48px;
+        letter-spacing: 2px;
+    }
+
+    .header-txt span {
+        font-size: 20px;
     }
 
     .header-txt p {
@@ -451,14 +471,22 @@ textarea {
 
     .header-dir {
         flex-direction: column;
+        gap: 1rem;
+    }
+
+    .dir h3 {
+        font-size: 20px;
     }
 
     .dir p {
-        font-size: 18px;
+        font-size: 16px;
     }
 
+    /* NOSOTROS */
+
     .welcome {
-        flex-direction: none;
+        flex-direction: column;
+        padding: 2rem 1.5rem;
     }
 
     .welcome-1 {
@@ -467,81 +495,147 @@ textarea {
 
     .welcome-2 {
         width: 100%;
-        padding: 30px;
+        padding: 30px 0;
         text-align: center;
     }
 
-    h2{
-        font-size: 70px;
-        line-height: 80px;
+    h2 {
+        font-size: 40px;
+        line-height: 48px;
     }
 
     p {
         margin: 15px 0;
     }
 
+    /* SERVICIOS */
+
     .services {
-        padding: 30px;
+        padding: 50px 1.5rem;
     }
 
-    .services-txt p{
+    .services-txt p {
         padding: 0;
     }
 
     .services-group {
-        flex-direction: row; /* Cambia de column a row */
-        flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
 
     .services-1 {
-        width: calc(50% - 15px); /* 2 tarjetas por fila */
-        margin: 0 0 15px 0;
-        min-height: auto; /* Altura automática */
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto 15px auto;
+        min-height: auto;
     }
+
+    /* COMPROMISO */
 
     .prices {
         flex-direction: column;
+        padding: 50px 1.5rem;
     }
 
     .prices-1 {
         width: 100%;
-        padding: 30px;
+        padding: 30px 0;
         text-align: center;
     }
 
     table {
         margin: 25px 0 0 0;
     }
-    
+
     .prices-2 {
         display: none;
     }
 
+    /* COMPAÑÍAS */
+
     .personal {
-        padding: 30px;
+        padding: 50px 1.5rem;
     }
 
     .personal-group {
-        flex-direction: column;
-        margin-bottom: 0;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 
     .personal-1 {
-        margin-bottom: 25px;
+        margin-bottom: 0;
     }
 
+    /* CONTACTO */
+
     .footer-bg {
-        padding: 30px;
+        padding: 50px 1.5rem;
+        background-position: center;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .campo-1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .campo {
+        width: 100%;
+        max-width: 100%;
     }
 
     textarea {
-        width: 250px !important;
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    .contact-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .contact-buttons .btn-1 {
+        width: 100%;
+        justify-content: center;
     }
 }
 
-@media(max-width: 768px){
+/* Móviles más pequeños */
+
+@media (max-width: 576px) {
+
+    .header-txt h2 {
+        font-size: 32px;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .services {
+        padding: 30px 1rem;
+    }
+
+    .personal-group {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bg {
+        padding: 40px 1rem;
+    }
+}
+
+
+@media(max-width: 768px) {
     .services-group {
         flex-direction: column;
         align-items: center;
@@ -555,10 +649,9 @@ textarea {
         width: 100% !important;
     }
 }
-  
-  @media(max-width: 480px) {
+
+@media(max-width: 480px) {
     .personal-group {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-  }
-  
+}
